@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+</style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item w3-right">Logo</span>
+</div>
+
+
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-top:43px;">
+    
+
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third">
+        <h5>County</h5>
+        <select name = "county" id="selectCounty" onchange="myFunction()">
+        	<option value = "Select"> Select County--</option>
+        	<option value = "Los Angeles"> Los Angeles</option>
+            <option value = "Santa Clara"> Santa Clara</option>
+        	<option value = "San Diego"> San Diego</option>
+        	<option value = "Marin"> Marin</option>
+        	<option value = "San Mateo"> San Mateo</option>
+        	<option value = "Alameda"> Alameda</option>
+        	<option value = "Contra Costa"> Contra Costa</option>
+        	<option value = "Inyo"> Inyo</option>
+        	<option value = "Napa"> Napa</option>
+        	<option value = "Orange"> Orange</option>
+        	<option value = "Placer"> Placer</option>
+        	<option value = "Sacramento"> Sacramento</option>
+        	<option value = "San Benito"> San Benito</option>
+        	<option value = "San Joaquin"> San Joaquin</option>
+        	<option value = "Santa Barbara"> Santa Barbara</option>
+        	<option value = "Solano"> Solano</option>
+			<option value = "Sonoma"> Sonoma</option>
+
+		</select>
+      </div>
+      <div class="w3-twothird">
+        <h5>Rules & Regulations</h5>
+        <table class="w3-table w3-striped w3-white" id = "laws"></table>
+      </div>
+    </div>
+  </div>
+
+
+  <script >
+		let laws = [
+	{
+
+		county:"Los Angeles",
+		
+		rules: ["Maintain 6 feet distance minimum at all times excluding Essential Business Activity", "Wear masks at all times", "Businesses must limit number of persons inside a building to maintain social distancing", "Businesses must hand sanitizer, soap and water, or effective disinfectant at or near the entrance of the facility and in other appropriate areas for use by the public and employee","Posts a sign in a conspicuous place at all public entries that instructs members of the public not to enter if they are experiencing symptoms of respiratory illness","Public or private schools, colleges, and universities must  cancel classes or other school activities where students gather on the school campus"
+		]
+		
+	},
+	
+	{
+	county: "Santa Clara",
+
+	rules: ["Maintain 6 feet distance minimum at all times excluding Essential Business Activity", "Wear masks at all times", "placing a cap on the number of people who can attend funerals to 10 or fewer individuals","prohibiting people from participating in outdoor activities that involve shared equipment","Public or private schools, colleges, and universities must  cancel classes or other school activities where students gather on the school campus"
+		]
+	},
+	{
+	county: "San Mateo",
+	rules: ["Maintain 6 feet distance minimum at all times excluding Essential Business Activity", "Wear masks at all times", "placing a cap on the number of people who can attend funerals to 10 or fewer individuals","prohibiting people from participating in outdoor activities that involve shared equipment","Public or private schools, colleges, and universities must  cancel classes or other school activities where students gather on the school campus"
+		]
+	},
+	{
+	county: "Marin",
+	rules: ["Maintain 6 feet distance minimum at all times excluding Essential Business Activity", "Wear masks at all times", "placing a cap on the number of people who can attend funerals to 10 or fewer individuals","prohibiting people from participating in outdoor activities that involve shared equipment","Public or private schools, colleges, and universities must  cancel classes or other school activities where students gather on the school campus"
+		]
+	},
+	{
+	county: "Alameda",
+	rules: ["Maintain 6 feet distance minimum at all times excluding Essential Business Activity", "Wear masks at all times", "placing a cap on the number of people who can attend funerals to 10 or fewer individuals","prohibiting people from participating in outdoor activities that involve shared equipment","Public or private schools, colleges, and universities must  cancel classes or other school activities where students gather on the school campus"
+		]
+	},
+	{
+	county: "Contra Costa",
+	rules: ["Maintain 6 feet distance minimum at all times excluding Essential Business Activity", "Wear masks at all times", "placing a cap on the number of people who can attend funerals to 10 or fewer individuals","prohibiting people from participating in outdoor activities that involve shared equipment","Public or private schools, colleges, and universities must  cancel classes or other school activities where students gather on the school campus"
+		]
+	},
+	{
+	county: "San Diego",
+	rules: ["Maintain 6 feet distance minimum at all times excluding Essential Business Activity", "Wear masks at all times", "All public or private gatherings are prohibited","Individuals who are over the age of 65 or have a chronic underlying conditionare are strongly recommended to stay home","All public, charter and private schools may hold classes or school business operations on the school campus, provided the school complies with the measures contained in the State COVID-19 Industry Guidance","Colleges and Universities shall not hold classes or other school activities where students gather on the school campus",
+		]
+	},
+
+	{
+		county: "Inyo",
+		rules: ["Must stay home unless essential activity","Maintain 6 feet distance at all times excluding Essential Business Activity","All public or private gatherings are prohibited","Wear masks at all times"
+		]
+	},
+	{
+		county: "Napa",
+		rules: ["Maintain 6 feet distance at all times excluding Essential Business Activity","Wear masks at all times",
+		]
+	},
+	{
+		county: "Orange",
+		rules: ["All businesses, industries, and entities may resume activity so long they follow the State COVID-19 Industry Guidance","Maintain 6 feet distance at all times excluding Essential Business Activity", "Wear masks at all times",]
+	},
+	{
+		county: "Placer",
+		ruler:["Maintain 6 feet distance at all times excluding Essential Business Activity","Wear masks at all times","Limit time outside the home and travel only for permissible activities, such as healthcare, food, outdoor exercise and recreation (individuals and households only)","Retail, related logistics and manufacturing, office workplaces, limited personal services, outdoor museums, child care may open with modifications"
+		]
+
+	},
+	{
+		county: "Sacramento",
+		rules: ["Maintain 6 feet distance at all times excluding Essential Business Activity","Wear masks at all times"," Certain businesses may resume activity so long they follow the State COVID-19 Industry Guidance"
+		]
+	},
+	{
+		county: "San Benito",
+		rules: ["Maintain 6 feet distance at all times excluding Essential Business Activity","Wear masks at all times","Outdoor operations may be conducted under a tent, canopy, or other sun shelter but only as long as the sides are not closed and there is sufficient outdoor air movement","Gyms and Fitness Centers, Places of Worship, Indoor Protests, Offices for Non-Critical Infrastructure Sectors as identified at covid19.ca.gov, Personal Care Services(including nail salons, massage parlors, and tattoo parlors), Hair Salons and Barbershops, and Malls must close"
+		]
+	},
+	{
+		county: "San Joaquin",
+		rules: ["Maintain 6 feet distance at all times excluding Essential Business Activity","Wear masks at all times"
+		]
+	},
+	{
+		county: "Santa Barbara",
+		rules: [ "Maintain 6 feet distance at all times excluding Essential Business Activity","Wear masks at all times"
+		]
+	},
+	{
+		county: "Solano",
+		rules: ["Maintain 6 feet distance at all times excluding Essential Business Activity","Wear masks at all times","Public and private gatherings of any number of people, including places of work, occurring outside a single household or living unit, are prohibited excluding Essential Business Activity"]
+	},
+	{
+		county: "Sonoma",
+		rules: ["Maintain 6 feet distance at all times excluding Essential Business Activity","Wear masks at all times","The state order permits affected businesses to offer limited outside services: Outdoor dining and take-out service. Wineries and tasting rooms may operate outdoors without being required to serve food. Bars, clubs, breweries, brewpubs and distilleries may serve alcohol outdoors, but only in the same transaction as a meal.",
+		]
+	}
+
+]
+		function myFunction(){
+        var output = '';
+        var x = document.getElementById("selectCounty").value;
+        for (var i = 0; i< laws.length; i++){
+        	if(String(laws[i].county) == String(x)){
+            	for(var a = 0; a < laws[i].rules.length; a++){
+		 			output+='<tr> <td>'+laws[i].rules[a]+'</td></tr>'
+		 		}
+                i = laws.length;
+            }
+        }
+  		document.getElementById("laws").innerHTML = output;
+        }
+	</script>
+  
+
+</body>
+</html>
