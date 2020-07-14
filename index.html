@@ -31,7 +31,7 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         <select name = "county" id="selectCounty" onchange="myFunction()">
         	<option value = "Select"> Select County--</option>
         	<option value = "Los Angeles"> Los Angeles</option>
-            <option value = "Santa Clara"> Santa Clara</option>
+            	<option value = "Santa Clara"> Santa Clara</option>
         	<option value = "San Diego"> San Diego</option>
         	<option value = "Marin"> Marin</option>
         	<option value = "San Mateo"> San Mateo</option>
@@ -46,9 +46,9 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
         	<option value = "San Joaquin"> San Joaquin</option>
         	<option value = "Santa Barbara"> Santa Barbara</option>
         	<option value = "Solano"> Solano</option>
-			<option value = "Sonoma"> Sonoma</option>
+		<option value = "Sonoma"> Sonoma</option>
 
-		</select>
+	</select>
       </div>
       <div class="w3-twothird">
         <h5>Rules & Regulations</h5>
@@ -57,9 +57,10 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
     </div>
   </div>
 
-
+<!-- !COUNTY CONTENT! -->
   <script >
-		let laws = [
+	  
+	let laws = [
 	{
 
 		county:"Los Angeles",
@@ -152,20 +153,20 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 	}
 
 ]
-		function myFunction(){
-        var output = '';
-        var x = document.getElementById("selectCounty").value;
-        for (var i = 0; i< laws.length; i++){
-        	if(String(laws[i].county) == String(x)){
-            	for(var a = 0; a < laws[i].rules.length; a++){
-		 			output+='<tr> <td>'+laws[i].rules[a]+'</td></tr>'
-		 		}
-                i = laws.length;
-            }
+	function myFunction(){
+		var output = '';
+		var x = document.getElementById("selectCounty").value;
+		for (var i = 0; i< laws.length; i++){
+			if(String(laws[i].county) == String(x)){
+			for(var a = 0; a < laws[i].rules.length; a++){
+				output+='<tr> <td>'+laws[i].rules[a]+'</td></tr>'
+			 }
+			i = laws.length;
+			}
+		}
+		document.getElementById("laws").innerHTML = output;
         }
-  		document.getElementById("laws").innerHTML = output;
-        }
-	</script>
+</script>
   
 
 </body>
